@@ -21,6 +21,6 @@ mse = mean_squared_error(y_test,y_pred)
 print(f"Mean Squared Error: {mse:.2f}%")
 
 # Testing the Algorithm
-new_feature = np.array([[140]])
+new_feature = np.array([[(int(input("Enter your desired area: ")))]])
 predicted_price = model.predict(new_feature)
 print(predicted_price)
