@@ -22,9 +22,10 @@ y_pred_test = model.predict(x_test)
 mse = mean_squared_error(y_test, y_pred_test)
 print(f"MSE for test data: {mse:.4f}")
 
-# Prediction for a new data point (6 hours)
-y_pred_single = model.predict([[6]])
-print(f"Predicted marks for 6 hours of study: {y_pred_single[0]:.2f}")
+# Prediction for a new data point (Desired hours)
+i = int(input("Enter your desired hours: "))
+y_pred_single = model.predict([[i]])
+print(f"Predicted marks for {i} hours of study: {y_pred_single[0]:.2f}")
 
 # Plotting the regression line
 plt.scatter(hours, marks, color='blue', label='Actual data')  # Data points
